@@ -1,0 +1,226 @@
+/* ====================== */
+/* ===== Общие стили ===== */
+/* ====================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 1);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: rgba(192, 192, 192, 1);
+}
+
+/* ====================== */
+/* ===== Контейнер ====== */
+/* ====================== */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ====================== */
+/* ===== Кнопки ========= */
+/* ====================== */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 155px;
+  height: 42px;
+
+  color: #000;
+  background-color: rgba(255, 255, 255, 1);
+
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 7px;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* ====================== */
+/* ===== Ссылки и ul ===== */
+/* ====================== */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ====================== */
+/* ===== Хедер ========= */
+/* ====================== */
+.header {
+  height: 100px;
+}
+
+/* Контейнер шапки */
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 140px 10px 140px;
+}
+
+/* Лого + навигация */
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 340px;
+}
+
+.header_logo {
+  width: 128px;
+  height: 31px;
+  transition: opacity 0.3s;
+  margin-top: 20px;
+}
+
+.header_logo:hover {
+  opacity: 0.7;
+}
+
+/* Навигация */
+.header_nav {
+  display: flex;
+  margin-top: 11px;
+}
+
+.header_nav a {
+  font-size: 13px;
+  text-align: left;
+  transition: opacity 0.3s;
+}
+
+.header_nav a:hover,
+.header_nav a.active {
+  opacity: 0.7;
+}
+
+/* Список пунктов меню */
+.header_list {
+  display: flex;
+  margin-top: -2px;
+}
+
+.header_list li:first-child + li {
+  margin-left: 56px;
+}
+
+.header_list li:nth-child(n + 3) {
+  margin-left: 32px;
+}
+
+/* Специфичные стили кнопки */
+.header .btn {
+  margin-top: 11px;
+}
+
+/* ====================== */
+/* ===== Секция Welcome == */
+/* ====================== */
+.main {
+  display: flex;
+  flex-direction: column; /* секции идут друг за другом сверху вниз */
+  width: 100%; /* занимает всю ширину страницы */
+  min-height: 100vh; /* чтобы хотя бы на полный экран был */
+  position: relative; /* если внутри есть абсолютные элементы */
+}
+
+.welcome {
+  padding-top: 531px;
+  padding-bottom: 60px;
+
+  display: flex;
+  justify-content: center;
+
+  /* Фон секции */
+  background-image: url('./img/one.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome .container-text {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px 10px 10px;
+}
+
+.welcome_subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 1px 0;
+}
+
+.welcome_title {
+  font-size: 54px;
+  line-height: 60px;
+  text-align: center;
+  margin: 0 0 18px 0;
+}
+
+.welcome_desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0;
+}
+
+/* ====================== */
+/* ===== Иконки ========== */
+/* ====================== */
+.icon-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  top: 871px; /* отступ сверху от хедера */
+  right: 40px; /* отступ справа */
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* между svg и текстом */
+}
+
+.icon-item p {
+  margin: 0;
+  position: relative;
+  top: -5px;
+  font-size: 14px;
+}
