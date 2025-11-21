@@ -73,6 +73,13 @@ ul a {
   cursor: pointer;
 }
 
+/* Общие стили для всех групп иконок */
+.icon-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 /* ====================== */
 /* ===== Хедер ========= */
 /* ====================== */
@@ -188,28 +195,231 @@ ul a {
   font-size: 54px;
   line-height: 60px;
   text-align: center;
-  margin: 0 0 18px 0;
+  margin: -16px 0 18px 0;
 }
 
 .welcome_desc {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0%;
   text-align: center;
-  margin: 0;
+  margin-top: -7px;
 }
 
 /* ====================== */
 /* ===== Иконки ========== */
 /* ====================== */
-.icon-group {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+
+/* Позиция в секции Welcome */
+.welcome .icon-group {
   position: absolute;
-  top: 871px; /* отступ сверху от хедера */
-  right: 40px; /* отступ справа */
+  top: 758px;
+  right: 40px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* между svg и текстом */
+}
+
+.icon-item p {
+  margin: 0;
+  position: relative;
+  top: -5px;
+  font-size: 14px;
+}
+
+/* ====================== */
+/* ===== Портфолио ====== */
+/* ====================== */
+
+.portfolio {
+  width: 100%;
+  padding: 120px 0 100px;
+  background: rgba(0, 0, 0, 1);
+}
+
+.portfolio__card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.portfolio__intro {
+  width: 600px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+
+.portfolio__intro h2,
+.portfolio__intro p {
+  margin: 0;
+}
+
+.portfolio__title {
+  color: #fff;
+  font-size: 40px;
+  text-align: left;
+  margin: 0 0 10px;
+}
+
+.portfolio__desc {
+  font-size: 23px;
+  text-align: left;
+  margin: 0;
+}
+
+.portfolio__grid {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 40px auto 0;
+}
+
+/* Карточка */
+.portfolio__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__item-bg {
+  width: 576px;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== ТЕКСТОВЫЙ БЛОК ===== */
+.portfolio__text-block {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+}
+
+.portfolio__item-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.portfolio__item-desc {
+  font-size: 14px;
+  margin: 0;
+  width: 100%;
+  max-width: 516px;
+  height: 80px;
+}
+
+/* ===== КНОПКА ===== */
+.portfolio__text-block .swipe {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 143px;
+  height: 42px;
+  border-radius: 14px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  padding-left: 12px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  transition: 0.35s ease;
+}
+
+.swipe__circle {
+  position: absolute;
+  left: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #000;
+  transition: 0.35s ease;
+}
+
+.swipe__text {
+  position: relative;
+  margin-left: 40px;
+  transition: 0.35s ease;
+  font-size: 12.5px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+}
+
+.swipe:hover .swipe__circle {
+  left: calc(100% - 36px);
+}
+
+.swipe:hover .swipe__text {
+  margin-left: 10px;
+}
+
+/* ====================== */
+/* == Секция After-Portfolio == */
+/* ====================== */
+
+.after-portfolio {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin: 0 auto; /* центрируем секцию на странице */
+  background-image: url('./img/six.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; /* центр горизонтально */
+  align-items: center; /* центр вертикально */
+}
+
+.after-portfolio .container_text {
+  position: absolute; /* чтобы можно было точно задать отступы */
+  left: 1088px; /* отступ от левого края секции */
+  right: 62px; /* отступ от правого края секции */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* выравниваем тексты по левому краю блока */
+}
+
+.after-portfolio__subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: -12px;
+}
+
+.after-portfolio__desc {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+/* ====================== */
+/* ===== Иконки ========== */
+/* ====================== */
+
+/* Позиция в секции After-Portfolio */
+.after-portfolio .icon-group {
+  position: absolute;
+  top: 560px;
+  right: 40px;
 }
 
 .icon-item {
